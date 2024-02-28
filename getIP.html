@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const parseUrl = new URL(window.location.href);
+        const protocol = parseUrl?.protocol // 获取协议部分，例如'http:'
+        const port = parseUrl.port; // 获取端口号，例如'81'
+        const result = `${protocol}//${parseUrl.hostname}:${port}`; // 获取ip+端口
+        console.log(result)
+    </script>
+</body>
+</html>
